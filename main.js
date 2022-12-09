@@ -85,6 +85,7 @@ assignModalForm.addEventListener("submit", (e)=>{
 // Edit tasks
 let editTask = (pk, type)=>{
     let taskList = type === "assign" ? unassignedTasks : inProgressTasks
+    console.log(taskList)
     let task
     for(x in taskList){
         if(taskList[x].pk == pk){
@@ -92,6 +93,7 @@ let editTask = (pk, type)=>{
             taskList.splice(x, 1)
         }
     }
+    console.log(task)
     type === "assign" ? unassignedTasks = taskList : inProgressTasks = taskList
     let editDesc = document.querySelector("#editTaskDescription")
     let editPriCheck = document.querySelector("#editPriorityCheck")
@@ -183,3 +185,13 @@ let cardBuilder = (description, priority, btnText, pk, assignedTo="Unassigned", 
     }
     return cardDiv
 }
+
+// let closeBtns = document.querySelectorAll(".close")
+$(".close").on("click", function(){
+    $(this).closest($(".modal")).modal("hide")
+})
+// closeBtns.forEach((ele)=>{
+//     ele.addEventListener("click", ()=>{
+//         console.log(ele.parentElement.parentElement.parentElement.parentElement.parentElement)
+//     })
+// })
