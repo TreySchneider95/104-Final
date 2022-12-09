@@ -1,0 +1,2 @@
+This is a local storage task tracker designed to track simple tasks that will not take more than one day. The functions of the task tracker is full CRUD on each task, assigning tasks, and completing tasks. Each function of the app is broken down into its own javascript functions. Jquery is reqired only for the modal show and the modal hides.
+Jquery was used for this because it is what is reccomended in the Bootstrap Docs.
