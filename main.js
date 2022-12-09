@@ -5,6 +5,8 @@ let assignModal = $("#assignModal")
 let assignModalForm = document.querySelector("#assignModalForm")
 let pk = 0
 let editModal = $("#editModal")
+
+
 // local task storage
 let unassignedTasks = []
 let inProgressTasks = []
@@ -186,12 +188,7 @@ let cardBuilder = (description, priority, btnText, pk, assignedTo="Unassigned", 
     return cardDiv
 }
 
-// let closeBtns = document.querySelectorAll(".close")
 $(".close").on("click", function(){
     $(this).closest($(".modal")).modal("hide")
 })
-// closeBtns.forEach((ele)=>{
-//     ele.addEventListener("click", ()=>{
-//         console.log(ele.parentElement.parentElement.parentElement.parentElement.parentElement)
-//     })
-// })
+
