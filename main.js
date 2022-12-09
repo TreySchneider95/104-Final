@@ -95,7 +95,6 @@ let editTask = (pk, type)=>{
             taskList.splice(x, 1)
         }
     }
-    console.log(task)
     type === "assign" ? unassignedTasks = taskList : inProgressTasks = taskList
     let editDesc = document.querySelector("#editTaskDescription")
     let editPriCheck = document.querySelector("#editPriorityCheck")
